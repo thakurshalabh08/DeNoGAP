@@ -40,10 +40,10 @@ use File::Basename;
  
     $full_name=~s/\#/ /g;
     
-    #run_glimmer($genome_name,$genome_file,$glimmer_dir,$glimmer3_opt,$long_orf_opt,$multi_extract_opt,$build_icm_opt);
-    #run_genemark($genome_name,$genome_file,$genemark_dir,$genemark_opt);
-    #run_prodigal($genome_name,$genome_file,$prodigal_dir,$prodigal_opt);
-    #run_fragscan($genome_name,$genome_file,$fragscan_dir,$fragscan_opt);
+    run_glimmer($genome_name,$genome_file,$glimmer_dir,$glimmer3_opt,$long_orf_opt,$multi_extract_opt,$build_icm_opt);
+    run_genemark($genome_name,$genome_file,$genemark_dir,$genemark_opt);
+    run_prodigal($genome_name,$genome_file,$prodigal_dir,$prodigal_opt);
+    run_fragscan($genome_name,$genome_file,$fragscan_dir,$fragscan_opt);
 
     read_gene_prediction($genome_name,$full_name,$genome_file,$project_dir,$glimmer_dir,$genemark_dir,$prodigal_dir,$fragscan_dir,$cds_dir,$protein_dir,$feature_dir,$translation,$overlap_base,$predicted_orf_dir,$gff_dir,$gbk_dir);
     
